@@ -1,0 +1,159 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f2f2f2;
+    text-align: center;
+}
+
+.game {
+    max-width: 700px;
+    margin: 30px auto;
+    background: white;
+    padding: 25px;
+    border-radius: 20px;
+}
+
+h1 {
+    font-size: 32px;
+}
+
+#word {
+    letter-spacing: 10px;
+    font-size: 30px;
+}
+
+/* Hangman drawing */
+
+.hangman {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin: auto;
+}
+
+/* Gallows */
+
+.gallows {
+    position: absolute;
+    width: 180px;
+    height: 5px;
+    background: black;
+    left: 50px;
+    top: 270px;
+}
+
+.gallows::before {
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 230px;
+    background: black;
+    left: 30px;
+    bottom: 0;
+}
+
+.gallows::after {
+    content: "";
+    position: absolute;
+    width: 120px;
+    height: 5px;
+    background: black;
+    left: 30px;
+    top: 0;
+}
+
+/* Head */
+
+.head {
+    display: none;
+    position: absolute;
+    width: 55px;
+    height: 55px;
+    border: 5px solid black;
+    border-radius: 50%;
+    left: 145px;
+    top: 45px;
+}
+
+/* Body */
+
+.body {
+    display: none;
+    position: absolute;
+    width: 5px;
+    height: 90px;
+    background: black;
+    left: 175px;
+    top: 110px;
+}
+
+/* Arms */
+
+.left-arm,
+.right-arm,
+.left-leg,
+.right-leg {
+    display: none;
+    position: absolute;
+    width: 5px;
+    height: 65px;
+    background: black;
+    transform-origin: top;
+}
+
+.left-arm {
+    left: 175px;
+    top: 125px;
+    transform: rotate(45deg);
+}
+
+.right-arm {
+    left: 175px;
+    top: 125px;
+    transform: rotate(-45deg);
+}
+
+.left-leg {
+    left: 175px;
+    top: 195px;
+    transform: rotate(40deg);
+}
+
+.right-leg {
+    left: 175px;
+    top: 195px;
+    transform: rotate(-40deg);
+}
+
+/* Buttons */
+
+#letters {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 6px;
+    margin: 20px;
+}
+
+#letters button {
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+}
+
+#letters button:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+#restart {
+    padding: 12px 25px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+}

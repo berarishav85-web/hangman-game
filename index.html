@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hangman Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="game">
+
+        <h1>🎮 HANGMAN GAME</h1>
+
+        <div class="hangman">
+            <div class="gallows"></div>
+            <div class="head"></div>
+            <div class="body"></div>
+            <div class="left-arm"></div>
+            <div class="right-arm"></div>
+            <div class="left-leg"></div>
+            <div class="right-leg"></div>
+        </div>
+
+        <h2 id="word">_ _ _ _ _ _</h2>
+
+        <p id="lives">Wrong guesses: 0 / 6</p>
+
+        <div id="letters"></div>
+
+        <h2 id="result"></h2>
+
+        <button id="restart">PLAY AGAIN</button>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
